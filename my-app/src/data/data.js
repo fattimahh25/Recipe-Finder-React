@@ -7,7 +7,7 @@ import img6 from "../assets/images/Grilled-Salmon.jpg";
 import img7 from "../assets/images/French-Toast.jpg";
 import img8 from "../assets/images/chicken-tikka-masala.jpg";
 import img9 from "../assets/images/Greek-Salad.jpg";
-import img10 from "../assets/images/tiramisu.jpg";
+import img10 from "../assets/images/Tiramisu.jpg";
 import img11 from "../assets/images/quinoa-buddha-bowl.jpg";
 import img12 from "../assets/images/beef-tacos.jpg";
 import img13 from "../assets/images/margherita-pizza.jpg";

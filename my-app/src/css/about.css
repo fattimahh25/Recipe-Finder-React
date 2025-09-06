@@ -113,19 +113,19 @@
       }
 
       .chef-bg {
-        background-image: url("profile-01.jpg");
+        background-image: url("../assets/images/profile-01.jpg");
         background-size: cover;
         background-position: center;
       }
 
       .dev-bg {
-        background-image: url("profile-02.jpg");
+        background-image: url("../assets/images/profile-02.jpg");
         background-size: cover;
         background-position: center;
       }
 
       .manager-bg {
-        background-image: url("profile-03.jpg");
+        background-image: url("../assets/images/profile-03.jpg");
         background-size: cover;
         background-position: center;
       }
