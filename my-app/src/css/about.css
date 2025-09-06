@@ -1,0 +1,144 @@
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f9fafb;
+        line-height: 1.6;
+      }
+
+      .main-section {
+        padding: 4rem 0;
+        background: #f9fafb;
+      }
+
+      .container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .page-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .page-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 1rem;
+      }
+
+      .page-subtitle {
+        font-size: 1.25rem;
+        color: #6b7280;
+      }
+
+      .content-card {
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .card-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: #1f2937;
+      }
+
+      .card-text {
+        font-size: 1.125rem;
+        color: #374151;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .info-card {
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+      }
+
+      .info-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .info-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+        color: #1f2937;
+      }
+
+      .info-text {
+        color: #374151;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .team-member {
+        text-align: center;
+      }
+
+      .team-avatar {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        margin: 0 auto 1rem;
+      }
+
+      .chef-bg {
+        background-image: url("profile-01.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .dev-bg {
+        background-image: url("profile-02.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .manager-bg {
+        background-image: url("profile-03.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .team-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #1f2937;
+      }
+
+      .team-role {
+        color: #6b7280;
+      }
+
+    
