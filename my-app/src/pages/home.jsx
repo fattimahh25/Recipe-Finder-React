@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
 import data from "../data/data.js"; 
 import "../css/home.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2"; // ✅ Import SweetAlert2
 
 function Home() {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
+
   const [cardsData, setCardsData] = useState([]);
   const [currentFilter, setCurrentFilter] = useState("all");
   const [displayedRecipes, setDisplayedRecipes] = useState(6);
@@ -26,23 +33,37 @@ function Home() {
     setDisplayedRecipes(6);
   };
 
+  // ✅ SweetAlert in search
   const searchRecipes = () => {
     if (searchTerm.trim() === "") {
-      alert("Please enter a search term!");
+      Swal.fire({
+        icon: "warning",
+        title: "Oops...",
+        text: "Please enter a search term!",
+      });
       return;
     }
     localStorage.setItem("searchTerm", searchTerm);
     navigate("/recipes");
   };
 
+  // ✅ SweetAlert in load more
   const loadMoreRecipes = () => {
     setDisplayedRecipes(displayedRecipes + 3);
+    Swal.fire({
+      icon: "success",
+      title: "More Recipes Loaded!",
+      text: "Scroll down to explore the new recipes 🍽️",
+      timer: 2000,
+      showConfirmButton: false,
+    });
   };
 
   const viewRecipe = (id) => {
     navigate(`/recipe/${id}`); 
   };
 
+  // ✅ SweetAlert in surprise me
   const surpriseMe = () => {
     const surpriseRecipes = [
       {
@@ -71,13 +92,21 @@ function Home() {
     ];
     const randomRecipe =
       surpriseRecipes[Math.floor(Math.random() * surpriseRecipes.length)];
-    alert(
-      `🎉 Surprise Recipe!\n\n${randomRecipe.emoji} ${randomRecipe.title}\n${randomRecipe.cuisine} • ${randomRecipe.time}\n${randomRecipe.description}`
-    );
+
+    Swal.fire({
+      title: "🎉 Surprise Recipe!",
+      html: `
+        <h3>${randomRecipe.emoji} ${randomRecipe.title}</h3>
+        <p><strong>${randomRecipe.cuisine}</strong> • ${randomRecipe.time}</p>
+        <p>${randomRecipe.description}</p>
+      `,
+      confirmButtonText: "Yummy! 😋",
+    });
   };
 
   return (
     <div>
+      {/* Hero Section */}
       <section className="hero">
         <div className="hero-container fade-in">
           <h1>
@@ -89,6 +118,7 @@ function Home() {
             the perfect dish for any occasion.
           </p>
 
+          {/* Search */}
           <div className="search-container">
             <input
               type="text"
@@ -103,6 +133,7 @@ function Home() {
             </button>
           </div>
 
+          {/* Buttons */}
           <div className="hero-buttons">
             <button onClick={surpriseMe} className="surprise-btn">
               🎲 Surprise Me!
@@ -112,6 +143,7 @@ function Home() {
         </div>
       </section>
 
+      {/* Category Section */}
       <section className="category-section">
         <div className="container">
           <h2 className="section-title">Browse by Category</h2>
@@ -138,6 +170,7 @@ function Home() {
         </div>
       </section>
 
+      {/* Featured Recipes */}
       <section className="recipes-section">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
@@ -153,6 +186,7 @@ function Home() {
                 key={recipe.id}
                 className="recipe-card"
                 onClick={() => viewRecipe(recipe.id)}
+                data-aos="fade-up"
               >
                 <div className="recipe-image">
                   <img
@@ -175,6 +209,7 @@ function Home() {
             ))}
           </div>
 
+          {/* Load More Button */}
           <div className="load-more">
             <button onClick={loadMoreRecipes} className="load-more-btn">
               Load More Recipes

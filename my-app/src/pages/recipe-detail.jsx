@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/data.js";
 import "../css/recipe-detail.css";
+import Swal from "sweetalert2"; // ✅ Import SweetAlert2
 
 const RecipeDetail = () => {
   const { id } = useParams();
@@ -17,11 +18,33 @@ const RecipeDetail = () => {
     );
   }
 
-  const startCooking = () => alert("Happy cooking! 👨‍🍳 Enjoy making this delicious recipe!");
-  const saveRecipe = () => alert("Recipe saved to your favorites! ❤️");
+  // ✅ Convert alert to SweetAlert
+  const startCooking = () => {
+    Swal.fire({
+      icon: "info",
+      title: "Happy Cooking! 👨‍🍳",
+      text: "Enjoy making this delicious recipe!",
+      confirmButtonText: "Let's Cook 🚀",
+    });
+  };
+
+  const saveRecipe = () => {
+    Swal.fire({
+      icon: "success",
+      title: "Recipe Saved! ❤️",
+      text: "This recipe is now in your favorites.",
+      confirmButtonText: "Great! 👍",
+    });
+  };
+
   const shareRecipe = () => {
     navigator.clipboard.writeText(window.location.href);
-    alert("Recipe link copied! 📋 Share it with your friends!");
+    Swal.fire({
+      icon: "success",
+      title: "Link Copied! 📋",
+      text: "Recipe link copied to clipboard. Share it with your friends!",
+      confirmButtonText: "Done ✅",
+    });
   };
 
   return (
@@ -97,10 +120,17 @@ const RecipeDetail = () => {
                   </div>
                 </div>
 
+                {/* Action Buttons with SweetAlerts */}
                 <div className="action-buttons">
-                  <button className="btn btn-primary" onClick={startCooking}>🍳 Start Cooking</button>
-                  <button className="btn btn-secondary" onClick={saveRecipe}>💾 Save Recipe</button>
-                  <button className="btn btn-secondary" onClick={shareRecipe}>📤 Share Recipe</button>
+                  <button className="btn btn-primary" onClick={startCooking}>
+                    🍳 Start Cooking
+                  </button>
+                  <button className="btn btn-primary" onClick={saveRecipe}>
+                    💾 Save Recipe
+                  </button>
+                  <button className="btn btn-secondary" onClick={shareRecipe}>
+                    📤 Share Recipe
+                  </button>
                 </div>
               </div>
             </div>

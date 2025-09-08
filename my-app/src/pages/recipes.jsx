@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../css/recipes.css";
 import data from "../data/data.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 
 const Recipes = () => {
+    React.useEffect(() => {
+    AOS.init();
+  }, []);
   const [cardsData, setCardsData] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -94,6 +99,7 @@ const Recipes = () => {
                 className="recipe-card"
                 key={recipe.id}
                 onClick={() => viewRecipe(recipe.id)}
+                data-aos="fade-up"
               >
                 <div className="recipe-image">
                   <img
