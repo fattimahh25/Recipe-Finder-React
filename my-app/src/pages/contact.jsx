@@ -66,7 +66,7 @@ function Contact() {
     <h3 className="info-title">Email Us</h3>
     <p className="info-text">
       Have questions or suggestions? Reach out anytime at  
-      <strong> support@flavorfind.com</strong>.
+      <strong>support@flavorfind.com</strong>
     </p>
   </div>
 
@@ -75,7 +75,7 @@ function Contact() {
     <h3 className="info-title">Call Us</h3>
     <p className="info-text">
       We’re happy to chat about food, recipes, or collaborations.  
-      Call us at <strong>+92 300 1234567</strong>.
+      Call us at <strong>+92 300 1234567</strong>
     </p>
   </div>
 </div>
