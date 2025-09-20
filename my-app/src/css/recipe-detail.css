@@ -21,6 +21,7 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 1rem;
+  width: 100%;
 }
 
 .back-btn {
@@ -112,6 +113,7 @@ body {
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .instructions-section {
   background: #f3f4f6;
   border-radius: 0.5rem;
@@ -155,7 +157,6 @@ body {
 .step-text {
   color: #374151;
 }
-
 
 .ingredients-card,
 .nutrition-card {
@@ -247,6 +248,22 @@ body {
   background: #d1d5db;
 }
 
+
+@media (max-width: 768px) {
+  .recipe-details {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .recipe-title {
+    font-size: 2rem;
+  }
+
+  .recipe-description {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 480px) {
   .recipe-title {
     font-size: 1.5rem;
@@ -254,6 +271,10 @@ body {
 
   .recipe-description {
     font-size: 1rem;
+  }
+
+  .recipe-content {
+    padding: 1rem;
   }
 
   .recipe-hero {
@@ -273,6 +294,11 @@ body {
 
   .nutrition-grid {
     grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .btn {

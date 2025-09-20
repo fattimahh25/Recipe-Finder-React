@@ -3,7 +3,7 @@
 footer {
   background: #1f2937;
   color: white;
-  padding: 3rem 0;
+  padding: 2rem 0 ;
 }
 
 .footer-grid {
@@ -11,20 +11,28 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 }
-
+.footer-logo{
+  display: flex;
+}
 .footer-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
+.logo-img {
+  height: 50px;    
+  width: auto;
+  display: block;
+}
 .footer-subtitle {
   font-weight: 600;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .footer-links {
   list-style: none;
+  font-size: 0.9rem;
 }
 
 .footer-links li {
@@ -43,8 +51,9 @@ footer {
 
 .footer-bottom {
   border-top: 1px solid #374151;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   text-align: center;
-  color: #9ca3af;
+}
+.footer-bottom p{
+  color: #4f5661;
 }

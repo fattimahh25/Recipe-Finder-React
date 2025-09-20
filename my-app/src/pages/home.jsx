@@ -208,6 +208,41 @@ function Home() {
           </div>
         </div>
       </section>
+<div>
+  <section className="stats-section">
+    <div className="container">
+      <div className="stats-grid fade-in">
+        <div>
+          <div className="stat-number">50K+</div>
+          <div className="stat-label">Recipes</div>
+        </div>
+        <div>
+          <div className="stat-number">2M+</div>
+          <div className="stat-label">Happy Cooks</div>
+        </div>
+        <div>
+          <div className="stat-number">150+</div>
+          <div className="stat-label">Countries</div>
+        </div>
+        <div>
+          <div className="stat-number">4.9★</div>
+          <div className="stat-label">Average Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section className="newsletter">
+    <div className="container">
+      <h2>Never Miss a Recipe!</h2>
+      <p>Get weekly recipe recommendations delivered to your inbox</p>
+      <div className="newsletter-form">
+        <input type="email" placeholder="Enter your email" className="newsletter-input" />
+        <button className="newsletter-btn">Subscribe</button>
+      </div>
+    </div>
+  </section>
+</div>
+
     </div>
   );
 }
