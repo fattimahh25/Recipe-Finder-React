@@ -4,7 +4,7 @@ import "../css/home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2"; // ✅ Import SweetAlert2
+import Swal from "sweetalert2";
 
 function Home() {
   React.useEffect(() => {
@@ -33,7 +33,6 @@ function Home() {
     setDisplayedRecipes(6);
   };
 
-  // ✅ SweetAlert in search
   const searchRecipes = () => {
     if (searchTerm.trim() === "") {
       Swal.fire({
@@ -47,7 +46,6 @@ function Home() {
     navigate("/recipes");
   };
 
-  // ✅ SweetAlert in load more
   const loadMoreRecipes = () => {
     setDisplayedRecipes(displayedRecipes + 3);
     Swal.fire({
@@ -63,7 +61,6 @@ function Home() {
     navigate(`/recipe/${id}`); 
   };
 
-  // ✅ SweetAlert in surprise me
   const surpriseMe = () => {
     const surpriseRecipes = [
       {
@@ -106,7 +103,6 @@ function Home() {
 
   return (
     <div>
-      {/* Hero Section */}
       <section className="hero">
         <div className="hero-container fade-in">
           <h1>
@@ -118,7 +114,6 @@ function Home() {
             the perfect dish for any occasion.
           </p>
 
-          {/* Search */}
           <div className="search-container">
             <input
               type="text"
@@ -133,7 +128,6 @@ function Home() {
             </button>
           </div>
 
-          {/* Buttons */}
           <div className="hero-buttons">
             <button onClick={surpriseMe} className="surprise-btn">
               🎲 Surprise Me!
@@ -143,7 +137,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Category Section */}
       <section className="category-section">
         <div className="container">
           <h2 className="section-title">Browse by Category</h2>
@@ -170,7 +163,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Featured Recipes */}
       <section className="recipes-section">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
@@ -209,7 +201,6 @@ function Home() {
             ))}
           </div>
 
-          {/* Load More Button */}
           <div className="load-more">
             <button onClick={loadMoreRecipes} className="load-more-btn">
               Load More Recipes

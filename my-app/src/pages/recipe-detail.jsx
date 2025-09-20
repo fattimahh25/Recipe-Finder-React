@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/data.js";
 import "../css/recipe-detail.css";
-import Swal from "sweetalert2"; // ✅ Import SweetAlert2
+import Swal from "sweetalert2"; 
 
 const RecipeDetail = () => {
   const { id } = useParams();
@@ -18,7 +18,6 @@ const RecipeDetail = () => {
     );
   }
 
-  // ✅ Convert alert to SweetAlert
   const startCooking = () => {
     Swal.fire({
       icon: "info",
@@ -120,7 +119,6 @@ const RecipeDetail = () => {
                   </div>
                 </div>
 
-                {/* Action Buttons with SweetAlerts */}
                 <div className="action-buttons">
                   <button className="btn btn-primary" onClick={startCooking}>
                     🍳 Start Cooking

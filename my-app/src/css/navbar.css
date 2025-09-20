@@ -20,15 +20,28 @@ nav {
   text-align: center;
   height: 64px;
 }
+.logo-img {
+  height: 50px;    
+  width: auto;
+  display: block;
+}
 
 .logo {
   font-size: 1.5rem;
+  display: flex;
   font-weight: bold;
   color: #7c3aed;
   cursor: pointer;
   text-decoration: none;
 }
-.logo:hover {
+.logo-text{
+    font-weight: bold;
+    margin-top: 5px;
+  color: #7c3aed;
+  cursor: pointer;
+  text-decoration: none;
+}
+.logo-text:hover {
   color: #6d28d9;
   text-align: center;
   text-decoration: none;
@@ -118,6 +131,12 @@ nav {
   }
   .menu-icon {
     display: block; 
+  }
+  .logo-text{
+    display: none;
+  }
+  .sign-in-btn{
+    display: none;
   }
   
 }

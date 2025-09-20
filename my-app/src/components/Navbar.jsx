@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/navbar.css';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo.png'; // <-- import your logo image
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,10 @@ function Navbar() {
     <>
       <nav>
         <div className="nav-container">
-          <Link to="/" className="logo">🍳 FlavorFind</Link>
+          <div className="logo">
+            <img src={logo} alt="FlavorFind Logo" className="logo-img" />
+            <Link to="/" className="logo-text">Flavor Find</Link>
+          </div>
           <ul className="nav-links">
             <li><Link to="/" className="active">Home</Link></li>
             <li><Link to="/recipes">Recipes</Link></li>
@@ -35,6 +39,7 @@ function Navbar() {
           <li><Link to="/recipes" onClick={() => setIsOpen(false)}>Recipes</Link></li>
           <li><Link to="/categories" onClick={() => setIsOpen(false)}>Categories</Link></li>
           <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+          <li><Link to="/Auth-form" onClick={() => setIsOpen(false)}>Sign In</Link></li>
         </ul>
       </nav>
     </>
