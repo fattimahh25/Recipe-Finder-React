@@ -33,6 +33,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  width: 100%;
 }
 
 .contact-form form {
@@ -56,15 +57,15 @@ body {
   text-align: center;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
-}
-
 .contact-form textarea {
   flex: 1 1 100%;
   border-radius: 1rem;
   resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
 }
 
 .send-btn {
@@ -125,6 +126,17 @@ body {
 }
 
 @media (max-width: 768px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    flex: 1 1 100%;
+    text-align: left;
+  }
+  .send-btn {
+    width: 100%;
+  }
   .info-grid {
     gap: 1.5rem;
     padding: 0 0.5rem;
@@ -135,8 +147,29 @@ body {
 }
 
 @media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+  .page-title {
+    font-size: 1.6rem;
+  }
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+  .contact-form form {
+    gap: 0.75rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+  .send-btn {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
   .info-grid {
-    grid-template-columns: 1fr;   
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   .info-card {
